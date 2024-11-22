@@ -12,27 +12,29 @@
     <div class="logo">
         <img src="images/logo.png" alt="">
     </div>
+    <div class="nav-menue">
        <nav class="nav-menu"> 
         <a href="#">ABOUT 3MTT</a>
         <a href="#">HOW TO APPLY</a>
         <a href="#">PLACEMENT</a>
         <a href="#">PARTNERSHIPS</a>
-        <a href="">
-            <button>Login</button>
-        </a>
     </nav>
+    
+        <button>Login</button>
+        <span class="fas fa-bars" id="menu"></span>
+</div>
    </header> 
    <div class="banner">
-   <h2> Shaping the Future of <br>  Nigerian's  Digital <br> Work Force</h2>
-   <p>The 3MTT programme by the Federal Ministry of Communications, Innovation & Digital <br> Economy will generate a pipeline of technical talent in line with President Bola Ahmed Tinubu’s <br> vision of creating 2 million digital jobs by 2025.</p>
+   <h2> Shaping the Future of Nigerian's  Digital  Work Force</h2>
+   <p>The 3MTT programme by the Federal Ministry of Communications, Innovation & Digital  Economy will generate a pipeline of technical talent in line with President Bola Ahmed Tinubu’s  vision of creating 2 million digital jobs by 2025.</p>
    <button>read more     <i class="fa-solid fa-arrow-right"></i></button>
    <img src="images/HeroBG.gif" alt="img">
 </div>
 
  <div class="mtt">
     <div>
-        <h2>THE 3MTT</h2>
-        <P>The 3 Million Technical Talent (3MTT) programme, a <br> critical part of the Renewed Hope agenda, is aimed at <br> building Nigeria’s technical talent backbone to power <br> our digital economy and position Nigeria as a net <br> talent exporter. The first phase of the programme, <br> executed in collaboration with NITDA, will involve <br> multiple stakeholders including fellows, training <br> providers, partners and placement organisations.</b></P>
+        <h2>The 3MTT</h2>
+        <P>The 3 Million Technical Talent (3MTT) programme, a critical part of the Renewed Hope agenda, is aimed at building Nigeria’s technical talent backbone to power our digital economy and position Nigeria as a net talent exporter. The first phase of the programme, executed in collaboration with NITDA, will involve multiple stakeholders including fellows, training providers, partners and placement organisations.</P>
     </div>
     <div>
         <img src="images/Group-4-1021x1024.png" alt="logo">
@@ -40,17 +42,17 @@
 </div>
 <div class="yn-container">
     <div class="youngNiger">
-        <p>300,000 young Nigerians <br> to be equipped in Phases <br> 1 & 2 of 3MTT
+        <p>300,000 young Nigerians to be equipped in Phases 1 & 2 of 3MTT
         </p>
         </div>
     <div class="yn">
     <div class="firstPhase">
-        <p>The first phase of the programme kicked off in<br>December 2023 with 30,000 fellows selected  <br>across all 36 states and the FCT. The fellows <br> went through an intense learning journey that <br> included self-paced online courses and <br> physical applied learning sessions, executed <br> in partnership with 120+ organizations.</p>
+        <p>The first phase of the programme kicked off in December 2023 with 30,000 fellows selected across all 36 states and the FCT. The fellows <br> went through an intense learning journey that included self-paced online courses and physical applied learning sessions, executed <br> in partnership with 120+ organizations.</p>
         <img src="images/IMG_8858-1536x1135.jpg" alt="img">
     </div>
     <div class="phaseTwo">
         <img src="images/IMG_7977-1-1536x1024.jpg" alt="img">
-        <p> The second phase of the programme will train <br> 270,00 technical talents in three cohorts of <br> 60,000, 90,000 and 120,000 respectively. <br> The 3MTT programme is executed in collaboration <br> with hundreds of applied learning clusters,  <br>state governments, development agencies <br> and other key stakeholders.</p>
+        <p> The second phase of the programme will train 270,00 technical talents in three cohorts of 60,000, 90,000 and 120,000 respectively. <br> The 3MTT programme is executed in collaboration with hundreds of applied learning clusters, state governments, development agencies and other key stakeholders.</p>
     </div>
 </div>
 </div> 
@@ -150,21 +152,30 @@
     <div class="footer-container">
         <div class="footer-logo">
             <img src="images\logo.png" alt="">
-            <footer>Copyright 2024 3 Million <br> Technical Talent <br> Powered by FMICDE</footer>
+            <footer>Copyright 2024 3 Million Technical Talent Powered by FMICDE</footer>
         </div>
         <div class="Information">
             <h2>Information</h2>
-            <footer>3MTT <br> Placements <br> Partnerships</footer>
+            <footer>3MTT Placements Partnerships</footer>
         </div>
         <div class="Useful">
             <h2>Useful Links</h2>
-            <footer>Become A Fellow <br> Register as a training provider <br> Partner with us <br>Visit our job board</footer>
+            <footer>Become A Fellow Register as a training provider  Partner with us Visit our job board</footer>
         </div>
         <div class="Contact">
             <h2>Contact Us</h2>
             <footer><i class="fa-regular fa-envelope"></i>support@3mtt.training</footer>
         </div>
     </div>
+    <script>
+        const menuBar = document.querySelector('#menu')
+        const navMenu = document.querySelector('.nav-menu')
+
+        menuBar.addEventListener('click',()=>{
+            navMenu.classList.toggle('active')
+        })
+
+    </script>
 
 </body>
 </html>

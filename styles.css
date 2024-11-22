@@ -11,18 +11,43 @@
 }
 
 header{
+    position: relative;
     display: flex;
     justify-content: space-between;
     padding: 0 5%;
     height: 120px;
     align-items: center;
     background: #f4f4f4;
+    @media screen and (max-width: 768px) {
+       
+    } 
 }
 
+.nav-menue{
+    display: flex;
+    gap: 22px;
+
+}
 .nav-menu{
     display: inline-flex;
     gap: 32px;
     align-items: center;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: -150%;
+        background-color: #fff;
+        padding: 10px 15px;
+        align-items: flex-start;
+    }
+}
+@media screen and (max-width: 768px) {
+    .nav-menu.active{
+        top: 100px;
+        position: fixed;
+    }
 }
 .nav-menu a{
     text-decoration: none;
@@ -31,7 +56,7 @@ header{
     font-weight: 900;
 }
 
-.nav-menu a button {
+header button {
   background: #26a65b;
   color: #fff;
   padding: 12px 20px;
@@ -51,30 +76,42 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #54595f;
-    height: 1200px;
+    background-color: #383d42;
+    height: 900px;
     text-align: center;
     flex-direction: column;
-    gap: 30px;
-    
+    gap: 20px;
+    @media screen and (max-width:768px) {
+            height: auto ;
+            padding-bottom: 30px;
+        }
     
 }
 .banner h2{
     color: #ffffff;
-    font-size: 54px;
+    font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
+    width: 19ch;
+    @media screen and (max-width: 768px) {
+       font-size: 25px;
+    } 
 }
 .banner p{
     color: #ffffff;
-    font-size: 18px;  
+    font-size: 12.2px;  
     font-family: Arial, Helvetica, sans-serif;
+    width: 70ch;
+    @media screen and (max-width: 768px) {
+        font-size: small;
+        width: 30ch;
+    } 
 
 }
 .banner button{
-    height: 59px;
-    width: 220px;
+    height: 40px;
+    width: 150px;
     background-color: #26a65b;
-    font-size: 18px;
+    font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 5px;
     border: none;
@@ -83,21 +120,27 @@ header{
 
 }
 .banner img{
-    height: 593px;
-    width: 949px;
+    height: 900px;
+    width: 900px;
     border-radius: 30px;
+    @media screen and (max-width: 768px) {
+        width: 412px;
+        height: auto;
+    } 
 }
 .mtt{
     background-color: #ffffff;
     display: flex;
-    padding: 30px 7%; 
+    padding: 15px 7%; 
     justify-content: space-between;
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+    height: 700px;
 }   
 
 .mtt div h2{
     color: #29562A;
-    font-size: 2.3rem;
+    font-size: 40px;
     padding-top: 60px;
     margin-bottom: 30px;
 }
@@ -106,6 +149,11 @@ header{
     width: 575px;
     transition: all;
     transition-duration: 0.5s;
+    @media screen and (max-width: 768px) {
+        width: 200px;
+        height: auto;
+    } 
+    
 }
 .mtt img:hover{
     transition: all;
@@ -114,27 +162,46 @@ header{
 }
 .mtt div p{
     font-size: 20px;
-    line-height: 30px;
-}
+    line-height: 25px;
+    width: 41ch;
+    @media screen and (max-width: 768px) {
+        width: 300px;
+        height: auto;
+    } 
 
+}
 
 .yn-container{
     padding: 50px 10%;
     background: #f9dcad;
+    @media screen and (max-width: 768px) {
+      padding: 50px 5%;
+ 
+     } 
 }
 
 .yn-container img{
-    width: 537px;
+    width:550px;
     height: auto;
     border-radius: 20px;
+    @media screen and (max-width: 768px) {
+        width: 350px;
+    } 
 }
 
 .youngNiger{
-    font-size: 38px;
+    font-size: 55px;
     color: #29562A;
-    font-weight: 800;
+    font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 50px;
+    width: 22ch;
+    @media screen and (max-width: 768px) {
+        width: 352px;
+        height: auto;
+        font-size: 35px;
+    }
+
 }
 
 .yn{
@@ -142,24 +209,58 @@ display: flex;
 justify-content: space-between;
 gap: 50px;
 flex-flow: column wrap;
-}
+} 
 
 .phaseTwo, .firstPhase {
     display: inline-flex;
-    align-items: center;
-    flex:  1;
-    gap: 150px;
+    align-items:center ;
+    flex-wrap: wrap;
+    flex: 1 ;
+    gap: 100px;
+    @media screen and (max-width: 768px) {
+       gap: 30px;
+       justify-content:center ;
+         
+     } 
+}
+
+.phaseTwo, .firstPhase, img :hover{
+    transition: all;
+    transition-duration: 0.5s;
+    transform: scale(0.9);
+}
+
+
+.phaseTwo, .firstPhase, img{
+    @media screen and (max-width: 768px) {
+       width: 100%;
+ 
+     } 
+}
+.phaseTwo{
+    @media screen and (max-width: 768px) {
+       flex-direction: column-reverse;
+
+    } 
 }
 .phaseTwo, .firstPhase p{
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    line-height: 30px;
-}
+    line-height: 25px;
+    width: 45ch;
+    font: 30px;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        height: auto;
+    } 
 
+
+
+}
 .cardcontainer{
     background-color: #F2FFF7;
     min-height: 300px;
-    padding: 60px 20%;
+    padding: 60px 10%;
+
 }
 
 .skill-intro{
@@ -171,19 +272,25 @@ flex-flow: column wrap;
   line-height: 54px;
   font-family: "Helvetica Neue", sans-serif;
   margin-bottom: 20px;
+  @media screen and (max-width: 768px) {
+    height: auto;
+} 
+
 }
 .skill-intro p{
     margin-bottom: 28px;
     font-family: "Helvetica Neue", sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 26.4px ;
     background: #F2FFF7;
     color: #000000;
+
 }
 .cardContentContainer{
     display: flex ;
     min-height: 350px;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .ContentContainer{
@@ -197,7 +304,10 @@ flex-flow: column wrap;
 .buildcontainer{
     /* display: flex; */
     min-height: 300px;
-    padding: 60px 15% ; 
+    padding: 60px 10%; 
+    @media screen and (max-width: 768px) {
+       padding: 5%;
+    } 
 }
 .buildwork{
    text-align: center;
@@ -209,6 +319,11 @@ flex-flow: column wrap;
    margin-bottom: 20px;
    line-height: 54.6px;
    letter-spacing: 0.6px;
+   @media screen and (max-width: 768px) {
+    /* width: 412px; */
+    height: auto;
+} 
+
 }
 .buildwork p{
     font-size: 16px;
@@ -218,27 +333,44 @@ flex-flow: column wrap;
 .training-info{
     display: flex;
     gap: 50px;
+    flex-wrap: wrap;
+    @media screen and (max-width: 768px) {
+        gap: 10px;
+    } 
 }
 
 .training-card{
-    width: 594px;
-    height: 656px;
-    padding: 30px;
+    width: 500px;
+    height: 700px;
+    padding:  30px;
     margin: 20px 0 100px 0;
     border-radius: 30px;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        /* height: auto; */
+        margin: 5px;
+    } 
 }
 .card-img img{
     width: 100%;
+    @media screen and (max-width: 768px) {
+        height: auto;
+    } 
+
 }
 .card-title{
     font-size: 35px;
     color: #29562a;
     height: 54px;
-    width: 384px;
+    width: 300px;
     font-family:"Helvetica Neue", Sans-serif;
     margin-bottom: 8px;
     padding: 25px 0px;
     line-height: 15.6px;
+    @media screen and (max-width: 768px) {
+        height: auto;
+        font-size: 28px;
+    }
 }
 .card-desc{
     font-size: 16px;
@@ -247,6 +379,10 @@ flex-flow: column wrap;
     color: #000000;
     width: 384px;
     margin-top: 25px;
+    @media screen and (max-width: 768px) {
+        width: 300px;
+        height: auto;
+    }
 }
 
 .card-btn{
@@ -261,7 +397,7 @@ flex-flow: column wrap;
     margin-top: 30px;
 }
 .come-container{
-    min-height: 400px; 
+    min-height: 450px; 
     justify-content:center;
     background: #29562a;
     text-align: center;
@@ -273,12 +409,22 @@ flex-flow: column wrap;
     color:#ffffff;
     font-family: Arial Helvetica , sans-serif;
     padding-top: 100px;
+    @media screen and (max-width: 768px) {
+        /* width: 100px; */
+         height: auto;
+    }
+
 }
 .come-container p{
     font-size:16px ;
     font-family: "Helvetica Neue", Sans-serif;
     padding-top: 30px;
     color: #ffffff;
+    @media screen and (max-width: 768px) {
+        width: 372px;
+        height: auto;
+    } 
+
 }
 .come-container button{
     background-color: #26a65b;
@@ -291,8 +437,12 @@ flex-flow: column wrap;
     margin-top: 50px;
     height: 40px;
     width: 200px;
+    @media screen and (max-width: 768px) {
+        height: auto;
+        margin-top: 40px;
+        
+    }
 }
-
 .partnerwith{
     background:#26a65b;
     color: #ffffff;
@@ -305,6 +455,11 @@ flex-flow: column wrap;
    min-height: 100px;
    padding: 30px 15%;
    background:#ffffff ;
+   @media screen and (max-width: 768px) {
+    height: auto;
+    padding: 30px 5%;
+    width: 300px;
+    } 
 }
 .faqscard-container{
     font-size:42px;
@@ -312,6 +467,11 @@ flex-flow: column wrap;
     line-height: 150px;
     text-align: center;
     color: #29562a;
+    @media screen and (max-width: 768px) {
+        width: 414px;
+        height: auto;
+    } 
+
 }
 .faqs-table{
     min-height: 200px;
@@ -321,22 +481,35 @@ flex-flow: column wrap;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    @media screen and (max-width: 768px) {
+        height: auto;
+        width: 300px;
+        } 
+
 }
 .faqstable{
     min-height: 180px;
     width: 575px;
-    padding: 10px;
+    padding: 30px;
+    @media screen and (max-width: 768px) {
+        width: 300px;
+        
+    }
 }
 .faqstable-list{
-    height: 48px;
-    width: 555px;
+   height: auto;
+    width: 550px;
     padding: 15px;
     background-color: #f1f1f1;
     font-family: "Helvetica Neue", Sans-serif;
     font-size: 16px;
-    line-height: 16px;
-    text-align: start;
+    line-height: 20px;
     display: flex;
+    @media screen and (max-width: 768px) {
+        height: auto; 
+        width: 305px;
+        } 
+
 }
 .faqstable-list:hover{
     background-color: #414141;
@@ -361,6 +534,11 @@ flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     line-height: 26px;
+    flex-wrap: wrap;
+    @media screen and (max-width:768px) {
+        padding: 30px 5% ;
+        justify-content: flex-start !important;
+    }
 }
 .footer-logo{
     height: 250px;
@@ -369,14 +547,27 @@ flex-flow: column wrap;
     width: 400px;
     padding: 10px;
     height: 250px;
+    @media screen and (max-width: 768px) {
+        padding: 0px;
+        height: auto;
+    } 
+
 }
 .footer-logo img{
     height: 102px;
     width: 326px;
     padding: 20px 80px 0px 100px;
+    @media screen and (max-width: 768px) {
+        height: auto;
+        padding:20px 80px 0px 0px;
+    } 
 }
 .footer-logo footer{
     padding: 0px 50px 0px 100px;
+    @media screen and (max-width: 768px) {
+        padding: 0;
+        height: auto;
+    } 
 }
 .Information{
     padding-left: 30px;
@@ -384,6 +575,10 @@ flex-flow: column wrap;
     line-height: 40px;
     width: 263px;
     height: 250px;
+    @media screen and (max-width: 768px) {
+        padding-left: 5px;
+        height: auto;
+    } 
 }
 .Information h2{
     font-size: 20px;
@@ -392,11 +587,15 @@ flex-flow: column wrap;
     padding-right: 5px;
 }
 .Useful{
-    padding-left: 30px;
+    padding-left: 50px;
     justify-content: space-between;
     line-height: 40px;
     width: 293px;
     height: 250px;
+    @media screen and (max-width: 768px) {
+        padding-left: 5px;
+        height: auto;
+    } 
 }
 .Useful h2{
     font-size: 20px;
@@ -410,9 +609,14 @@ flex-flow: column wrap;
     line-height: 40px;
     width: 337px;
     height: 250px;
+    @media screen and (max-width: 768px) {
+        padding-right:100px ;
+        height: auto;
+    
+    } 
 }
 .Contact h2{
-    font-size: 20px;
+   font-size: 20px ; 
 }
 .Contact i{
     padding-right: 5px;
@@ -421,6 +625,32 @@ flex-flow: column wrap;
     padding-top: 60px;
 }
 
+
+@media screen and (max-width:768px) {
+
+.banner{
+    height: auto;
+    padding-bottom: 30px;
+}
+}
+    
+@media screen and (max-width:768px){
+.faqstable-list{
+    flex-wrap: wrap;
+    
+}
+.footer-logo footer, .footer-logo img{
+    /* padding: 0; */
+}
+
+}
+/* @media (max-width: 768px) {
+    .nav {
+        display: none;
+        position: absolute;
+        top: 110%;
+    }
+}  */
 
 
     

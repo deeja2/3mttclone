@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="card">1</div>
+        <div class="card">2</div>
+        <div class="card">3</div>
+        <div class="card">4</div>
+        <div class="card">Lorem ipsum dolor sit amet consectetur, <br>adipisicing elit. Quia labore eaque maxime a nemo,<br> provident vitae nostrum nihil, voluptatem doloribus, dolor perspiciatis error assumenda molestias adipisci? Fugit temporibus assumenda quod.</div>
+        <div class="card">6</div>
+        <div class="card">7</div>
+        <div class="card">8</div>
+        <div class="card">9</div>
+        <div class="card">10</div>
+
+    </div>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-rows: 100px 200px 300px;
+            grid-template-rows:    repeat(5, 200px)
+            /* grid-template-columns: repeat(2, 1fr); */
+            /* gap: 20px 12px; */
+            /* grid-template-columns: minmax(auto, 50%) 1fr 3em 1fr; */
+           /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+            /* grid-template-columns: 200px 200px 200px 200px; */
+
+
+        }
+        .card{
+            background-color: tomato;
+        }
+    </style>
+</body>
+</html>
